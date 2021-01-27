@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="application-name" content="The Locker System">
+    <meta name="moss-verification" content="efe37b65abf0bb539e4cadc13d8dddf01c447cd5e611c3c9ff4869c93ffb8019">
+    <title>The Locker System</title>
+    <!-- Import library code for MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Import Color Picker library -->
+    <script src="jscolor.js"></script>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Digital Locker System</span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <!-- 'Locker settings' section -->
+                        <h2>
+                            Locker:<div id="lockerId"></div>
+                        </h2>
+                        <span id="deleteLocker"></span>
+                        <div>
+                            <!-- 'Content' section / information of the current locker -->
+                            <h4>
+                                Contents <textarea id="lockerContents"> </textarea>
+                            </h4>
+                        </div>
+                        <h4>
+                            <!--for Settings h4 heading-->
+                            Settings
+                            <!--Label input field-->
+                            <input class="mdl-textfield__input" type="text" id="lockerLabel">
+                            <!--jscolor class to the input element for lockerColor-->
+                            <input class="mdl-textfield__input jscolor" type="text" id="lockerColor">
+                        </h4>
+                        <div>
+                            <!-- buttons for Lock Locker and Close Locker -->
+                            <button
+                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                                onClick="lockLocker()">
+                                Lock Locker
+                            </button>
+                            <button
+                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                onClick="closeLocker()">
+                                Close Locker
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Attach JS files -->
+    <script src="shared.js"></script>
+    <script src="view.js"></script>
+</body>
+
+</html>
